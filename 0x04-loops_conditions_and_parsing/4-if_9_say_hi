@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Script display string best school and if passed length 9 display hi
+
+i=1
+
+while [ $i -le 10 ]
+do
+    echo "Best School"
+    if [ $i -eq 9 ]
+    then
+        echo "Hi"
+    fi
+    ((i++))
+done
