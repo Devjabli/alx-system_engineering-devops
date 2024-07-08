@@ -8,7 +8,10 @@ sudo apt-get install -y nginx
 # Creating an index.html page
 echo "Hello World!" | sudo tee /var/www/html/index.html
 
-# Performing a 301 Redirection
-sudo sed -i '/server_name _;/a \\trewrite ^/redirect_me https:\/\/github.com\/Devjabli permanent;' /etc/nginx/sites-enabled/default
+# Performing a 301 redirection
+sudo sed -i '/server_name _;/a \\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+
+# Ensuring the default site is enabled
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 # Restarting Nginx service
 sudo service nginx restart
