@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Access REST API to todo lists of employees"""
 
-import sys
 import requests
+import sys
 
 if __name__ == '__main__':
     empId = sys.argv[1]
