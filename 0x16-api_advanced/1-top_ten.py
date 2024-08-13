@@ -15,7 +15,7 @@ def print_top_ten_posts(subreddit):
     headers = {"User-Agent": "Custom"}
     params = {"limit": 10}
 
-    response = requests.get(url, headers=headers, params=params)
+    response = requests.get(url, headers=headers, params=params, timeout=20)
 
     if response.status_code == 200:
         posts = response.json().get("data", {}).get("children", [])
