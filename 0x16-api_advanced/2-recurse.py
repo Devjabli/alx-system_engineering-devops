@@ -10,6 +10,7 @@ def recurse(subreddit, hot_list=[], after=""):
         "https://www.reddit.com/r/{}/hot.json".format(subreddit),
         headers={"User-Agent": "Custom"},
         params={"after": after},
+        timeout=20
     )
 
     if req.status_code == 200:
@@ -21,7 +22,6 @@ def recurse(subreddit, hot_list=[], after=""):
 
         if after is None:
             return hot_list
-        else:
-            return recurse(subreddit, hot_list, after)
+        return recurse(subreddit, hot_list, after)
     else:
         return None
