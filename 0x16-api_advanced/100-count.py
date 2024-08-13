@@ -4,6 +4,7 @@ Function to count the occurrence of specified words in all hot posts of a given 
 """
 import requests
 
+
 def count_words(subreddit, word_list, after=None, counts={}):
     """
     Recursive function that queries the Reddit API, processes the titles of all
