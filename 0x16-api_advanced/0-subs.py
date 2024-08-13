@@ -2,7 +2,7 @@
 """Function to retrieve the number of subscribers of a specific Reddit subreddit."""
 import requests
 
-def get_subscriber_count(subreddit):
+def number_of_subscribers(subreddit):
     """Returns the total number of subscribers for the specified subreddit."""
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
     headers = {
