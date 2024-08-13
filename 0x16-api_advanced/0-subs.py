@@ -15,5 +15,4 @@ def number_of_subscribers(subreddit):
         data = response.json()
         subscribers = data['data']['subscribers']
         return subscribers
-    else:
-        return 0
+    return 0
